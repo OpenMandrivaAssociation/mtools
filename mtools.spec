@@ -1,13 +1,12 @@
 Summary:	Programs for accessing MS-DOS disks without mounting the disks
 Name: 		mtools
-Version: 	3.9.10
-Release: 	%mkrel 3
+Version: 	3.9.11
+Release: 	%mkrel 1
 License: 	GPL
 Group: 		File tools
 Url: 		http://mtools.linux.lu
 Source: 	http://mtools.linux.lu/%{name}-%{version}.tar.bz2
 Patch0: 	mtools-3.9.1-linux.patch
-Patch1: 	mtools-3.9.7-20000619.diff
 Patch2: 	mtools-3.9.6-atari.patch
 Patch4: 	mtools-3.9.8-fs.patch
 Patch5: 	mtools-3.9.9-supermount.patch
@@ -27,7 +26,6 @@ Mtools should be installed if you need to use MS-DOS disks.
 %prep
 %setup -q
 %patch0 -p1 -b .linux
-%patch1 -p1 -b .update
 %patch2 -p1 -b .atari
 %patch4 -p1 -b .compil
 %patch5 -p1 -b .supermount
