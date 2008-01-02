@@ -13,6 +13,7 @@ Patch5: 	mtools-3.9.9-supermount.patch
 BuildRequires: 	X11-devel
 BuildRequires:	texinfo
 Requires(pre): 	info-install
+Buildroot: 	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Mtools is a collection of utilities for accessing MS-DOS files.
