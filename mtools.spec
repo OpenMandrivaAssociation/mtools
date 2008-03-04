@@ -1,7 +1,7 @@
 Summary:	Programs for accessing MS-DOS disks without mounting the disks
 Name: 		mtools
 Version: 	3.9.11
-Release: 	%mkrel 2
+Release: 	%mkrel 3
 License: 	GPL
 Group: 		File tools
 Url: 		http://mtools.linux.lu
