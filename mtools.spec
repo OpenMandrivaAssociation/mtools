@@ -8,7 +8,6 @@ Url: 		http://mtools.linux.lu
 Source: 	http://mtools.linux.lu/%{name}-%{version}.tar.bz2
 Patch0: 	mtools-3.9.1-linux.patch
 Patch2: 	mtools-3.9.6-atari.patch
-Patch4: 	mtools-3.9.8-fs.patch
 Patch5: 	mtools-3.9.9-supermount.patch
 BuildRequires: 	X11-devel
 BuildRequires:	texinfo
@@ -27,7 +26,6 @@ Mtools should be installed if you need to use MS-DOS disks.
 %setup -q
 %patch0 -p1 -b .linux
 %patch2 -p1 -b .atari
-%patch4 -p1 -b .compil
 %patch5 -p1 -b .supermount
 
 %build
