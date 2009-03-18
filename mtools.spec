@@ -1,15 +1,13 @@
 Summary:	Programs for accessing MS-DOS disks without mounting the disks
 Name: 		mtools
-Version: 	4.0.1
-Release: 	%mkrel 2
-License: 	GPL
+Version: 	4.0.10
+Release: 	%mkrel 1
+License: 	GPLv3+
 Group: 		File tools
 Url: 		http://mtools.linux.lu
-Source: 	http://mtools.linux.lu/%{name}-%{version}.tar.gz
-Patch0: 	mtools-3.9.1-linux.patch
+Source: 	http://mtools.linux.lu/%{name}-%{version}.tar.bz2
+Patch0: 	mtools-4.0.10-linux.patch
 Patch2: 	mtools-3.9.6-atari.patch
-# (fc) 4.0.1-2mdv fix buffer overflow
-Patch3:		mtools-4.0.1-fixoverflow.patch
 BuildRequires: 	X11-devel
 BuildRequires:	texinfo
 Requires(pre): 	info-install
@@ -27,7 +25,6 @@ Mtools should be installed if you need to use MS-DOS disks.
 %setup -q
 %patch0 -p1 -b .linux
 %patch2 -p0 -b .atari
-%patch3 -p1 -b .fixoverflow
 
 %build
 %configure2_5x
@@ -53,7 +50,7 @@ install mtools.conf %{buildroot}%{_sysconfdir}
 %files
 %defattr(644,root,root,755)
 %config(noreplace) %{_sysconfdir}/mtools.conf
-%doc COPYING Changelog README Release.notes mtools.texi
+%doc COPYING NEWS README Release.notes mtools.texi
 %attr(755,root,root) %{_bindir}/f*
 %attr(755,root,root) %{_bindir}/l*
 %attr(755,root,root) %{_bindir}/m*
