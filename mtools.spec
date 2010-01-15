@@ -1,14 +1,14 @@
 Summary:	Programs for accessing MS-DOS disks without mounting the disks
 Name: 		mtools
-Version: 	4.0.10
-Release: 	%mkrel 3
+Version: 	4.0.12
+Release: 	%mkrel 1
 License: 	GPLv3+
 Group: 		File tools
 Url: 		http://mtools.linux.lu
 Source: 	http://mtools.linux.lu/%{name}-%{version}.tar.bz2
 Source1:	69-floppy-acl.rules
 Patch0: 	mtools-4.0.10-linux.patch
-Patch2: 	mtools-3.9.6-atari.patch
+Patch2: 	mtools-4.0.12-atari.patch
 BuildRequires: 	X11-devel
 BuildRequires:	texinfo
 Requires(pre): 	info-install
