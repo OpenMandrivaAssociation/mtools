@@ -1,6 +1,6 @@
 Summary:	Programs for accessing MS-DOS disks without mounting the disks
 Name: 		mtools
-Version: 	4.0.12
+Version: 	4.0.13
 Release: 	%mkrel 1
 License: 	GPLv3+
 Group: 		File tools
@@ -29,16 +29,13 @@ Mtools should be installed if you need to use MS-DOS disks.
 
 %build
 %configure2_5x
-
 %make
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 mkdir -p %{buildroot}/%{_prefix} %{buildroot}%{_sysconfdir}
 %makeinstall
 install mtools.conf %{buildroot}%{_sysconfdir}
-
 mkdir -p %{buildroot}/%{_sysconfdir}/udev/rules.d/
 install -m644 %{SOURCE1} %{buildroot}/%{_sysconfdir}/udev/rules.d/69-floppy-acl.rules
 
