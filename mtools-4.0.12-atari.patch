@@ -1,0 +1,21 @@
+--- fat.c.atari	2009-08-29 17:19:17.000000000 +0200
++++ fat.c	2010-01-15 18:09:12.000000000 +0100
+@@ -653,6 +653,9 @@
+ 		 * and 0xff.  Do not consider this as an error */
+ 		return 0;
+ 	
++	/* Some Atari ST disks are actually using f7/f9; ignore this
++	   "sanity check" to read them...
++
+ 	if((address[0] != boot->boot.descr && boot->boot.descr >= 0xf0 &&
+ 	    ((address[0] != 0xf9 && address[0] != 0xf7) 
+ 	     || boot->boot.descr != 0xf0)) || address[0] < 0xf0) {
+@@ -661,7 +664,7 @@
+ 				address[0],
+ 				boot->boot.descr);
+ 		return -1;
+-	}
++	} */
+ 
+ 	if(address[1] != 0xff || address[2] != 0xff){
+ 		fprintf(stderr,"Initial byte of fat is not 0xff\n");
