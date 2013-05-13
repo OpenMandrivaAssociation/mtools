@@ -9,8 +9,8 @@ Source: 	http://mtools.linux.lu/%{name}-%{version}.tar.bz2
 Source1:	69-floppy-acl.rules
 Patch0: 	mtools-4.0.10-linux.patch
 Patch2: 	mtools-4.0.12-atari.patch
-BuildRequires: 	libx11-devel
-BuildRequires:	libxau-devel
+BuildRequires: 	pkgconfig(x11)
+BuildRequires:	pkgconfig(xau)
 BuildRequires:	texinfo
 
 %description
