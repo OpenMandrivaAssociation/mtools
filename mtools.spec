@@ -1,7 +1,7 @@
 Summary:	Programs for accessing MS-DOS disks without mounting the disks
 Name:		mtools
-Version:	4.0.17
-Release:	12
+Version:	4.0.18
+Release:	1
 License:	GPLv3+
 Group:		File tools
 Url:		http://mtools.linux.lu
@@ -25,7 +25,7 @@ Mtools should be installed if you need to use MS-DOS disks.
 %apply_patches
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
