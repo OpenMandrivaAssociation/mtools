@@ -25,6 +25,9 @@ Mtools should be installed if you need to use MS-DOS disks.
 %apply_patches
 
 %build
+export CC=gcc
+export CXX=g++
+
 %configure
 %make
 
