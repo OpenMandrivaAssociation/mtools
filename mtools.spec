@@ -1,7 +1,7 @@
 Summary:	Programs for accessing MS-DOS disks without mounting the disks
 Name:		mtools
-Version:	4.0.17
-Release:	5
+Version:	4.0.18
+Release:	0.1
 License:	GPLv3+
 Group:		File tools
 Url:		http://mtools.linux.lu
@@ -9,8 +9,6 @@ Source0:	http://mtools.linux.lu/%{name}-%{version}.tar.bz2
 Source1:	69-floppy-acl.rules
 Patch0:		mtools-4.0.10-linux.patch
 Patch1:		mtools-4.0.12-atari.patch
-BuildRequires:	pkgconfig(x11)
-BuildRequires:	pkgconfig(xau)
 
 %description
 Mtools is a collection of utilities for accessing MS-DOS files.
@@ -25,7 +23,7 @@ Mtools should be installed if you need to use MS-DOS disks.
 %apply_patches
 
 %build
-%configure2_5x
+%configure2_5x --disable-floppyd
 %make
 
 %install
@@ -47,4 +45,3 @@ install -m644 %{SOURCE1} %{buildroot}/%{_sysconfdir}/udev/rules.d/69-floppy-acl.
 %{_bindir}/amuFormat.sh
 %{_mandir}/*/*
 %{_infodir}/%{name}.*
-
