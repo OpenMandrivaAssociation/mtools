@@ -37,7 +37,6 @@ install -m644 %{SOURCE1} %{buildroot}/%{_sysconfdir}/udev/rules.d/69-floppy-acl.
 %{_sysconfdir}/udev/rules.d/*.rules
 %config(noreplace) %{_sysconfdir}/mtools.conf
 %doc COPYING NEWS README Release.notes mtools.texi
-%{_bindir}/f*
 %{_bindir}/l*
 %{_bindir}/m*
 %{_bindir}/t*
