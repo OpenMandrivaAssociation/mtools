@@ -1,6 +1,6 @@
 Summary:	Programs for accessing MS-DOS disks without mounting the disks
 Name:		mtools
-Version:	4.0.37
+Version:	4.0.38
 Release:	1
 License:	GPLv3+
 Group:		File tools
@@ -37,5 +37,5 @@ install -m644 mtools.conf %{buildroot}%{_sysconfdir}
 %{_bindir}/t*
 %{_bindir}/u*
 %{_bindir}/amuFormat.sh
-%{_mandir}/*/*
-%{_infodir}/%{name}.*
+%doc %{_mandir}/*/*
+%doc %{_infodir}/%{name}.*
