@@ -1,6 +1,11 @@
+%ifnarch %{riscv}
+# (tpg) optimize it a bit
+%global optflags %{optflags} -Oz --rtlib=compiler-rt
+%endif
+
 Summary:	Programs for accessing MS-DOS disks without mounting the disks
 Name:		mtools
-Version:	4.0.42
+Version:	4.0.43
 Release:	1
 License:	GPLv3+
 Group:		File tools
