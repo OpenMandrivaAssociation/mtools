@@ -5,13 +5,15 @@
 
 Summary:	Programs for accessing MS-DOS disks without mounting the disks
 Name:		mtools
-Version:	4.0.43
-Release:	2
+Version:	4.0.44
+Release:	1
 License:	GPLv3+
 Group:		File tools
 Url:		http://mtools.linux.lu
 Source0:	http://mtools.linux.lu/%{name}-%{version}.tar.bz2
 Patch0:		mtools-4.0.10-linux.patch
+BuildSystem:	autotools
+BuildOption:	--disable-floppyd
 
 %description
 Mtools is a collection of utilities for accessing MS-DOS files.
@@ -21,17 +23,8 @@ style long file names, OS/2 Xdf disks, and 2m disks.
 
 Mtools should be installed if you need to use MS-DOS disks.
 
-%prep
-%autosetup -p1
-
-%build
-%configure --disable-floppyd
-%make_build
-
-%install
-mkdir -p %{buildroot}/%{_prefix} %{buildroot}%{_sysconfdir}
-%make_install
-
+%install -a
+mkdir -p %{buildroot}%{_sysconfdir}
 install -m644 mtools.conf %{buildroot}%{_sysconfdir}
 
 %files
