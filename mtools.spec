@@ -9,7 +9,7 @@ Version:	4.0.44
 Release:	1
 License:	GPLv3+
 Group:		File tools
-Url:		http://mtools.linux.lu
+Url:		https://mtools.linux.lu
 Source0:	http://mtools.linux.lu/%{name}-%{version}.tar.bz2
 Patch0:		mtools-4.0.10-linux.patch
 BuildSystem:	autotools
